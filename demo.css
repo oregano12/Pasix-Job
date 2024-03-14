@@ -2,6 +2,12 @@
   --ff-primary: Heebo, sans-serif;
   --ff-secondary: Bungee, cursive;
   --ff-accent: Bungee Shade, cursive;
+
+  --clr-black: #1f1f1f;
+  --clr-white: #FFFFFF;
+  --clr-gray: #b7bfcc;
+  --clr-light-blue: #9dfbf5;
+  --clr-dark-blue: #4562d9;
 }
 
 /* Box sizing rules */
@@ -87,11 +93,11 @@ select {
 }
 
 body {
-  background-image: linear-gradient(#2a2a2c, rgb(106, 70, 110), #845bb6);
+  background-image: linear-gradient(rgba(183, 191, 204, 0.95), rgba(31, 31, 31, 0.95)), url(./img/logo-final.jpeg);
+  background-position: center;
+  background-size: cover;
   font-family: var(--ff-primary);
   font-size: 1rem;
-  /* for demo purposes only */
-  /*padding: 2rem 0;*/
 }
 
 li,
@@ -103,7 +109,7 @@ button {
 }
 
 header {
-  background-color: #00000B;
+  background-color: var(--clr-black);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -121,7 +127,7 @@ header {
 .site-name {
   margin-left: .5rem;
   margin-right: auto;
-  color: firebrick;
+  color: var(--clr-dark-blue);
 }
 
 .nav__links {
@@ -149,31 +155,32 @@ header {
 
 .search__bar input {
   background: transparent;
-  border: 1px solid rgba(0, 136, 169, 1);
+  border: 1px solid rgba(69, 98, 217, 1);
   outline: none;
   color: #a6a6ae;
 }
 
 .search__bar img {
-  width: 2rem;
-  height: 2rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 button {
   margin-left: .5rem;
   margin-right: .5rem;
   padding: .25rem .5rem;
-  background-color: rgba(0, 136, 169, 1);
+  background-color: rgba(69, 98, 217, 1);
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
   color: black;
+  font-size: small;
   font-weight: bold;
 }
 
 button:hover {
-  background-color: rgba(0, 136, 169, 0.8);
+  background-color: rgba(69, 98, 217, 0.8);
 }
 
 /*wireframe*/ 
@@ -182,6 +189,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 2.5em;
 }
 
 .container {
@@ -200,9 +208,9 @@ button:hover {
   height: 100vh;
   width: 20%;
   margin: 2em 3em;
-  background-color: #27272c;
+  background-color: var(--clr-black);
   border-radius: 10px;
-  border: 8px solid black;
+  border: 8px solid var(--clr-black);
   text-align: center;
   align-items: center;
 }
@@ -221,15 +229,15 @@ button:hover {
 }
 
 .news_title {
-  color: #845bb6;
+  color: var(--clr-gray);
   padding: .5em;
   font-size: 100%;
-  text-shadow: 1px 1px 8px #845bb6;
+  text-shadow: 1px 1px 8px var(--clr-gray);
   margin: auto;
 }
 
 .news_text {
-    color: #0088a9;
+    color: var(--clr-dark-blue);
     padding: .5em;
     margin: auto;
     position: absolute;
@@ -317,7 +325,7 @@ button:hover {
 .card__content {
   text-align: left;
   padding: .5em;
-  background-color: #27272c;
+  background-color: var(--clr-black);
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -326,21 +334,21 @@ button:hover {
 }
 
 .card__title {
-  color: #845bb6;
+  color: var(--clr-dark-blue);
   padding: .5em;
   font-size: 150%;
-  text-shadow: 1px 1px 8px #845bb6;
+  text-shadow: 1px 1px 8px var(--clr-dark-blue);
   margin: auto;
 }
 
 .card__price {
-  color:#845bb6;
+  color:var(--clr-light-blue);
   font-size: large;
   font-weight: bold;
 }
 
 .card__description {
-  color: #0088a9;
+  color: var(--clr-dark-blue);
 }
 
 @media (min-width: 50em) {
@@ -352,7 +360,7 @@ button:hover {
 }
 
 .more__gamesnav {
-  background-color: rgb(45, 71, 76, 0.5);
+  background-color: rgb(45, 71, 76, 0.7);
   margin: 0.7em;
 }
 
@@ -388,7 +396,7 @@ button:hover {
 /*footer*/
 
 footer {
-  background-color: #00000B;
+  background-color: var(--clr-black);
 }
 
 .footer-container {
@@ -399,14 +407,13 @@ footer {
 .social-icons {
   display: flex;
   justify-content: center;
-  margin-left: .7em;
 }
 
 .social-icons a {
   text-decoration: none;
   padding: .6em;
   margin: .5em;
-  background-color: purple;
+  background-color: var(--clr-dark-blue);
   border-radius: 50%;
   font-size: 1.2em;
   opacity: 0.9;
