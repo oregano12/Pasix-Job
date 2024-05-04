@@ -1,0 +1,258 @@
+:root {
+  --ff-primary: Heebo, sans-serif;
+  --ff-secondary: Bungee, cursive;
+  --ff-accent: Bungee Shade, cursive;
+
+  --clr-black: #1f1f1f;
+  --clr-white: #FFFFFF;
+  --clr-gray: #b7bfcc;
+  --clr-light-blue: #9dfbf5;
+  --clr-dark-blue: #4562d9;
+}
+
+main .container > h3 {
+  margin: 2rem auto;
+  max-width: 58rem;
+  width: 100%;
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+main .subscribe .container .row2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+main .container .row2 .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 25%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 3px solid var(--clr-dark-blue);
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+main .container .row2 .box:last-child {
+  border-color: var(--clr-dark-blue);
+}
+
+main .container .row2 .box h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--clr-dark-blue);
+}
+
+main .container .row2 .box:last-child h2 {
+  color: var(--clr-dark-blue);
+}
+
+main .container .row2 .box .btn {
+  width: 100%;
+}
+
+.btn-white, .btn-red {
+  background-color: var(--clr-light-blue);
+  align-items: center;
+  text-align: center;
+  color: var(--clr-black);
+  border-radius: 5px;
+}
+
+main .container .row2 .box .free {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  min-height: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .container .row2 .box .prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  min-height: 7.5rem;
+}
+
+main .container .row2 .box .prices ul {
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-gray);
+  border-radius: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  gap: 1rem;
+  list-style: none;
+}
+
+main .container .row2 .box .prices ul li {
+  flex: auto;
+  padding: 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+  color: var(--clr-black);
+}
+
+main .container .row2 .box .prices ul li.active {
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+main .container .row2 .box .prices ul li:hover {
+  background-color: var(--clr-dark-blue);
+  border-radius: 0.5rem;
+  opacity: 0.9;
+}
+
+main .container .row2 .box .prices ul li span {
+  color: var(--clr-light-blue);
+  font-weight: 300;
+}
+
+main .container .row2 .box .yearly {
+  display: none;
+}
+
+main .container .row2 .box .monthly {
+  display: none;
+}
+
+main .container .row2 .box .yearly.active {
+  display: block;
+}
+
+main .container .row2 .box .prices .yearly s {
+  color: var(--clr-gray);
+}
+
+main .container .row2 .box .price {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--clr-black);
+}
+
+main .container .row2 .box .privileges {
+  color: var(--clr-black);
+}
+
+main .container .row .box .privileges li i {
+  color: var(--clr-gray);
+  margin-right: 1rem;
+}
+
+/*Faqs Section*/
+.faqs .container .row2 {
+  margin: 4rem auto;
+  width: 50%;
+}
+
+.faqs .container .row2 h2 {
+  font-size: x-large;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.faqs .container .row2 .faq {
+  border-bottom: 0.1rem solid  var(--clr-gray);
+  transition: var(--transition);
+}
+
+.faqs .container .row2 .faq:hover {
+  background-color: var(--clr-gray);
+}
+
+.faqs .container .row2 .faq .question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.75rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.faqs .container .row2 .faq.active .question {
+  background-color: var(--clr-gray);
+}
+
+.faqs .container .row2 .faq .question p {
+  font-weight: bold;
+}
+
+.faqs .container .row2 .faq .question i {
+  transition: var(--transition);
+}
+
+.faqs .container .row2 .faq.active .question i {
+  transform: rotate(180deg);
+}
+
+.faqs .container .row2 .faq .answer {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: var(--transition);
+}
+
+.faqs .container .row2 .faq.active .answer {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+}
+
+.faqs .container .row2 .faq .answer p {
+  margin: 0 0 1rem 1rem;
+}
+
+/*Contact us*/
+.contacts .container .row2 {
+  width: 80%;
+  margin: 0 auto 2rem;
+  background-color: var(--clr-dark-blue);
+  padding: 1.4rem 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.contacts .container .row2 .contact h3 {
+  margin-bottom: 0.5rem;
+  font-size: medium;
+  line-height: 1.2;
+}
+
+.contacts .container .row2 .contact p {
+  font-size: small;
+  color: var(--clr-gray);
+}
+
+.contacts .container .row2 .btn {
+  padding: 1rem;
+  width: 20rem;
+}
+
+@media (min-width: 863px) {
+  .contacts .container .row2 .btn {
+    margin-top: 0;
+  }
+}

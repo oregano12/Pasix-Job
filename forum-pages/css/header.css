@@ -1,0 +1,175 @@
+
+
+.header {
+  position: relative;
+  background: url(../img/header-img.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 9rem;
+}
+
+.header_row {
+  position: absolute;
+  left: 0;
+  bottom: -11rem;
+  width: 100%;
+  background-color: var(--clr-black);
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  order: 1;
+}
+
+.logo img {
+  margin-left: 0.5rem;
+  height: 4rem;
+  width: 10rem;
+}
+
+.header-title {
+  order: 2;
+}
+
+.header-content h1 {
+  color: var(--clr-dark-blue);
+}
+
+.nav-search {
+  order: 3;
+  flex: 1 1 100%;
+  margin-top: 1rem;
+}
+
+.form-group {
+  width: 100%;
+  position: relative;
+}
+
+.form-group input {
+  height: 4rem;
+  padding-left: 2rem;
+  border-radius: 0.4rem;
+  border: solid 0.1rem var(--clr-gray);
+  background-color: var(--clr-gray);
+  font-size: medium;
+  font-weight: 500;
+  text-align: left;
+  color: var(--clr-white);
+  width: 100%;
+}
+
+.form-group input:focus {
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+}
+
+.form-group input::placeholder {
+  font-weight: 500;
+  color: var(--clr-white);
+  font-size: medium;
+}
+
+.form-group i {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  color: var(--clr-white);
+}
+
+.nav-group {
+  order: 3;
+}
+
+.nav-group ul {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-group ul li a {
+  font-size: large;
+  color: var(--clr-white);
+}
+
+.nav-group ul li a:hover {
+  color: var(--clr-light-blue);
+}
+
+.nav-group ul li a span {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 9rem;
+  }
+
+.header_row {
+    bottom: 0;
+    background-color: var(--clr-black);
+    opacity: 0.9;
+  }
+
+.header-content {
+    align-items: center;
+    padding: 0 0.5rem;
+  }
+
+.logo {
+    width: 7rem;
+  }
+
+.logo img {
+    height: 5rem;
+    width: 5.5rem;
+  }
+
+.header-content h1 {
+    margin-right: 5rem;
+  }
+
+ .nav-search {
+    order: 3;
+    flex: 1 1 auto;
+    margin-top: 0;
+    padding: 0 1rem;
+  }
+
+ .form-group {
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+ .nav-group {
+    width: 24rem;
+    order: 4;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+  }
+
+.nav-group li{
+    list-style: none;
+  }
+
+.nav-group ul li a span {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: medium;
+    font-weight: 500;
+    color: var(--clr-white);
+    margin-left: 0.5rem;
+  }
+}
